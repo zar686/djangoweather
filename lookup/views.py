@@ -6,7 +6,7 @@ def home(request):
 
 	if request.method == "POST":
 		zipcode = request.POST['zipcode']
-		api_request = requests.get("http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=" + zipcode + "&distance=5&API_KEY=96A38DFD-5C56-4740-AD99-E38C0C855A1B")
+		api_request = requests.get("https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=" + zipcode + "&distance=25&API_KEY=285DA698-7ADA-48B7-9C70-4D5317745362")
 
 		try:
 			api = json.loads(api_request.content)
