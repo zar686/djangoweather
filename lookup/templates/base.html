@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+    <style media="screen">
+      .good {background-color: #0C0;}
+      .moderate {background-color: #FFFF00;}
+      .usg {background-color: #FF9900;}
+      .unhealthy {background-color: #FF0000;}
+      .veryunhealthy {background-color: #990066;}
+      .hazardous {background-color: #660000;}
+    </style>
+
+
   </head>
   <body>
 
@@ -27,8 +37,9 @@
 
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      {% csrf_token %}
+      <input class="form-control mr-sm-2" type="search" placeholder="Enter Zipcode" aria-label="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Lookup</button>
     </form>
   </div>
 </nav>
